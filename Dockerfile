@@ -95,6 +95,7 @@ RUN if [ "$(which auditwheel)" ]; then \
     /opt/python/cp39-cp39/bin/pip wheel . && \
     /opt/python/cp310-cp310/bin/pip wheel . && \
     /opt/python/cp311-cp311/bin/pip wheel . && \
+    /opt/python/cp312-cp312/bin/pip wheel . && \
     cp -a "/build/lib/Linux-$(uname -m)/onnxruntime/lib"/libonnxruntime*.so* /usr/lib/ && \
     auditwheel repair *.whl; \
     fi
